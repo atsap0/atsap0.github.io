@@ -1,0 +1,789 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;light&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.png">
+  <link rel="icon" type="image/png" href="/img/avatar.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="atsap">
+  <meta name="keywords" content="">
+  <title>博客搭建笔记 - atsap&#39;s blog</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/default.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <img src="/img/45.png" srcset="/img/loading.gif" width="50" height="50">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>atsap's blog</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('https://cdn.jsdelivr.net/gh/atsap0/hexopictures/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-04-06 00:00" pubdate>
+        2020年4月6日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      21
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">博客搭建笔记</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p> 简单记录hexo博客的两次搭建过程                                                                        </p>
+<p>​    <a id="more"></a>                                                                                                        </p>
+<h3 id="1-hexo-vps服务器"><a href="#1-hexo-vps服务器" class="headerlink" title="1. hexo+vps服务器"></a>1. hexo+vps服务器</h3><h4 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h4><p>win10</p>
+<p>vultr上买的centos7（部署服务器用</p>
+<p>hexo 4.2.0</p>
+<h4 id="博客搭建："><a href="#博客搭建：" class="headerlink" title="博客搭建："></a>博客搭建：</h4><p>下载nodeJS安装包,地址：<a target="_blank" rel="noopener" href="http://nodejs.cn/">http://nodejs.cn/</a></p>
+<p>安装Git</p>
+<p>新建文件夹，shift+右键打开powershell窗口，</p>
+<div class="hljs"><pre><code class="hljs avrasm">npm install hexo-<span class="hljs-keyword">cli</span> -g</code></pre></div>
+
+<p>全局安装hexo-cli脚手架工具</p>
+<p>（-g 全局安装的包直接安装到计算机中，只需安装一次，以后在计算机的任何位置都可以使用这个包</p>
+<p>在powershell窗口中接着初始化hexo</p>
+<div class="hljs"><pre><code class="hljs csharp">hexo <span class="hljs-keyword">init</span></code></pre></div>
+
+<p>安装相关依赖插件：</p>
+<div class="hljs"><pre><code class="hljs cmake">npm <span class="hljs-keyword">install</span></code></pre></div>
+
+<p>在theme文件夹中有一个自带的landscape主题，但我们可以另外选择主题，下载好后放到theme文件夹下，并打开博客的<strong>根目录</strong>里“_config.yml”文件，找到theme属性值，替换为新的主题的文件夹名称即可</p>
+<p>根目录下“_config.yml”文件的配置可以通过这篇文章了解：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zemprogram/article/details/104288872?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2&amp;utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2">https://blog.csdn.net/zemprogram/article/details/104288872?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2&amp;utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2</a></p>
+<p>主题的详细配置可以在<strong>该主题目录下</strong>“_config.yml”文件里修改配置</p>
+<p>通过以下命令可以</p>
+<p>清除缓存</p>
+<div class="hljs"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo clean</span></code></pre></div>
+
+<p>重新生成静态博客文件：</p>
+<div class="hljs"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo g</span></code></pre></div>
+
+<p>开启本地预览服务：</p>
+<div class="hljs"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo s</span></code></pre></div>
+
+<p>然后就可以在浏览器中通过地址“<a target="_blank" rel="noopener" href="http://localhost:4000/%E2%80%9D%E6%9D%A5%E8%AE%BF%E9%97%AE%E5%8D%9A%E5%AE%A2%E4%BA%86">http://localhost:4000/”来访问博客了</a></p>
+<p>ctrl+C可以关闭博客,关闭后可以修改配置，再次启动就可以看到变化</p>
+<h4 id="写文章："><a href="#写文章：" class="headerlink" title="写文章："></a>写文章：</h4><p>新建文章</p>
+<div class="hljs"><pre><code class="hljs haxe">hexo <span class="hljs-keyword">new</span> <span class="hljs-type"></span>‘<span class="hljs-number">1</span>’</code></pre></div>
+
+<div class="hljs"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo s</span></code></pre></div>
+
+<p>启动后本地访问就可以看见多了一篇名为‘1’的博客啦</p>
+<p>同时在 source  下的  _posts 中也可以看见多出了“1.md”的文件，只需要在md文件中对文件内容进行修改，刷新网页后就能看到修改后的博客</p>
+<p>也可以把写好的md文件移到_posts 中，刷新网页可以看到新的博客</p>
+<p>将md文件删除会删除此博客</p>
+<h4 id="部署到服务器："><a href="#部署到服务器：" class="headerlink" title="部署到服务器："></a>部署到服务器：</h4><h5 id="vps服务器"><a href="#vps服务器" class="headerlink" title="vps服务器"></a>vps服务器</h5><p>需要先购买一台vps主机</p>
+<p>检查IP是否被墙：</p>
+<p><a target="_blank" rel="noopener" href="http://coolaf.com/tool/port">http://coolaf.com/tool/port</a></p>
+<p>如端口“22”显示红色“开放”状态，则IP可用</p>
+<h5 id="vps上安装nginx与git"><a href="#vps上安装nginx与git" class="headerlink" title="vps上安装nginx与git"></a>vps上安装nginx与git</h5><p>打开xshell6，连接vps服务器，开始安装nginx</p>
+<p>在xshell中</p>
+<p>先更新</p>
+<div class="hljs"><pre><code class="hljs ebnf"><span class="hljs-attribute">yum -y update</span></code></pre></div>
+
+<p>安装git和nginx</p>
+<div class="hljs"><pre><code class="hljs cmake">yum <span class="hljs-keyword">install</span> -y git nginx</code></pre></div>
+
+<p>如果报错：No package nginx available</p>
+<p>安装epel后可以解决</p>
+<div class="hljs"><pre><code class="hljs sql">yum <span class="hljs-keyword">install</span> epel-<span class="hljs-keyword">release</span></code></pre></div>
+
+
+
+<h5 id="验证nginx是否配置成功"><a href="#验证nginx是否配置成功" class="headerlink" title="验证nginx是否配置成功"></a>验证nginx是否配置成功</h5><p>可以新建一个html文件，能够显示：Nginx running作为标记来验证nginx配置成功</p>
+<p>xshell6中用以下方式，创建博客目录，修改文件权限：</p>
+<div class="hljs"><pre><code class="hljs haskell"><span class="hljs-title">mkdir</span> /<span class="hljs-class"><span class="hljs-keyword">data</span></span>
+
+<span class="hljs-title">cd</span> /<span class="hljs-class"><span class="hljs-keyword">data</span></span>
+
+<span class="hljs-title">mkdir</span> www
+
+<span class="hljs-title">cd</span> www
+
+<span class="hljs-title">mkdir</span> hexo
+
+<span class="hljs-title">chmod</span> -<span class="hljs-type">R</span> <span class="hljs-number">755</span> /<span class="hljs-class"><span class="hljs-keyword">data</span>/www/hexo</span></code></pre></div>
+
+<p>新建html文件</p>
+<div class="hljs"><pre><code class="hljs awk">vi  <span class="hljs-regexp">/data/</span>www<span class="hljs-regexp">/hexo/i</span>ndex.html</code></pre></div>
+
+<p>新建文件的方法：vi  路径</p>
+<p>如果有提示文件已经存在，按住方向键向下到提示底部，再按任意键可以进入命令模式</p>
+<p>用vi打开文件后，先进入命令模式。按i/o可以进入编辑模式，esc退出到命令模式，：wq可以保存并退出</p>
+<p>vi命令详解：<a target="_blank" rel="noopener" href="https://blog.csdn.net/cyl101816/article/details/82026678">https://blog.csdn.net/cyl101816/article/details/82026678</a></p>
+<p>可以插入内容如下：</p>
+<div class="hljs"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Nginx running<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre></div>
+
+<p>保存退出</p>
+<h5 id="编辑nginx-conf文件"><a href="#编辑nginx-conf文件" class="headerlink" title="编辑nginx.conf文件"></a>编辑nginx.conf文件</h5><p>xshell6使用以下命令配置nginx服务器：</p>
+<div class="hljs"><pre><code class="hljs awk">vim <span class="hljs-regexp">/etc/</span>nginx/nginx.conf</code></pre></div>
+
+<p>修改以下三项：</p>
+<p>user改为root</p>
+<p>server中的server_name改成vps的ip地址或自己的域名，多个域名/ip可以用一个空格间隔开</p>
+<p>root修改为hexo博客文件存放的目录（刚刚的验证html文件也放这里了），即</p>
+<div class="hljs"><pre><code class="hljs awk"><span class="hljs-regexp">/data/</span>www<span class="hljs-regexp">/hexo/</span></code></pre></div>
+
+<p>配置后保存退出</p>
+<p>重启nginx：</p>
+<div class="hljs"><pre><code class="hljs ebnf"><span class="hljs-attribute">systemctl restart nginx</span></code></pre></div>
+
+<p>nginx服务器配置详细可以参考这篇文章：</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/5d6bd48b4c2f">https://www.jianshu.com/p/5d6bd48b4c2f</a></p>
+<p>检查nginx服务器配置是否正确：</p>
+<div class="hljs"><pre><code class="hljs awk">sudo nginx -t -c <span class="hljs-regexp">/etc/</span>nginx/nginx.conf</code></pre></div>
+
+<p>结尾有success说明配置成功</p>
+<p>ps：fail有可能因为语法错误，注意<code>;</code>或<code>&#125;</code>是否不小心删掉了</p>
+<p>重启nginx：</p>
+<div class="hljs"><pre><code class="hljs ebnf"><span class="hljs-attribute">systemctl restart nginx</span></code></pre></div>
+
+<p>访问域名或ip，可以看见“nginx running”，说明nginx配置成功，如果没有成功，请阅读“端口”</p>
+<h5 id="端口："><a href="#端口：" class="headerlink" title="端口："></a>端口：</h5><p>nginx默认的端口是80，但是发现购买的主机上80端口没有开放</p>
+<p>开放80端口：</p>
+<div class="hljs"><pre><code class="hljs routeros">firewall-cmd <span class="hljs-attribute">--zone</span>=public <span class="hljs-attribute">--add-port</span>=80/tcp --permanent</code></pre></div>
+
+
+
+<h5 id="创建git仓库"><a href="#创建git仓库" class="headerlink" title="创建git仓库"></a>创建git仓库</h5><div class="hljs"><pre><code class="hljs haskell"><span class="hljs-title">mkdir</span> /<span class="hljs-class"><span class="hljs-keyword">data</span>/<span class="hljs-type">GitLibrary</span></span>
+
+<span class="hljs-title">chmod</span> -<span class="hljs-type">R</span> <span class="hljs-number">755</span> /<span class="hljs-class"><span class="hljs-keyword">data</span>/<span class="hljs-type">GitLibrary</span></span>
+
+<span class="hljs-title">cd</span> /<span class="hljs-class"><span class="hljs-keyword">data</span>/<span class="hljs-type">GitLibrary</span></span>
+
+<span class="hljs-title">git</span> init <span class="hljs-comment">--bare hexo.git</span></code></pre></div>
+
+<p>创建git钩子：</p>
+<div class="hljs"><pre><code class="hljs awk">vim <span class="hljs-regexp">/data/</span>GitLibrary<span class="hljs-regexp">/hexo.git/</span>hooks/post-receive</code></pre></div>
+
+<p>增加内容：</p>
+<div class="hljs"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span>
+git --work-tree=/data/www/hexo --git-dir=/data/GitLibrary/hexo.git checkout -f</code></pre></div>
+
+<div class="hljs"><pre><code class="hljs awk">chmod +x <span class="hljs-regexp">/data/</span>GitLibrary<span class="hljs-regexp">/hexo.git/</span>hooks/post-receive</code></pre></div>
+
+<p>来源：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35117024/article/details/104021260?utm_source=app">https://blog.csdn.net/qq_35117024/article/details/104021260?utm_source=app</a></p>
+<p>步骤3.7~3.10</p>
+<h5 id="配置根目录下-config-yml"><a href="#配置根目录下-config-yml" class="headerlink" title="配置根目录下_config.yml"></a>配置根目录下_config.yml</h5><p>最底部的deploy信息：</p>
+<p>注意type、repository、branch后的冒号后有一个空格，其它没有</p>
+<div class="hljs"><pre><code class="hljs dts"><span class="hljs-symbol">deploy:</span>
+<span class="hljs-symbol">  type:</span> git
+<span class="hljs-symbol">  repository:</span> root@<span class="hljs-meta">###:/data/GitLibrary/hexo     <span class="hljs-comment">//###为域名或ip地址</span></span>
+<span class="hljs-symbol">  branch:</span> master</code></pre></div>
+
+
+
+<h5 id="博客推送到服务器"><a href="#博客推送到服务器" class="headerlink" title="博客推送到服务器"></a>博客推送到服务器</h5><p>本地powershell或git输入：</p>
+<div class="hljs"><pre><code class="hljs ebnf"><span class="hljs-attribute">hexo d</span></code></pre></div>
+
+<p>把博客推送到服务器</p>
+<p>如果失败，可能是repository填写有非法字符，或者还没安装插件：</p>
+<p>用git：</p>
+<div class="hljs"><pre><code class="hljs sql">npm <span class="hljs-keyword">install</span> hexo-deployer-git <span class="hljs-comment">--save  </span></code></pre></div>
+
+<p>成功推送后，通过域名或ip地址可以访问博客</p>
+<p>搭建博客完成</p>
+<p>参考文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35117024/article/details/104021260?utm_source=app">https://blog.csdn.net/qq_35117024/article/details/104021260?utm_source=app</a></p>
+<h3 id="2-hexo-github"><a href="#2-hexo-github" class="headerlink" title="2. hexo+github"></a>2. hexo+github</h3><p>很多步骤前面都搞过了，这次就简单地写一下吧</p>
+<p>1.创建一个github账号</p>
+<p>2.安装git</p>
+<p>3.安装node.js</p>
+<p>4.安装npm</p>
+<p>5.在github上新建一个名为<code>你的用户名.github.io</code>的仓库</p>
+<p>6.配置ssh key</p>
+<p>7.安装配置hexo</p>
+<p>8.在上传代码到github之前，一定要记得先把你以前所有代码下载下来（虽然github有版本管理，但备份一下总是好的），因为从hexo提交代码时会把你以前的所有代码都删掉</p>
+<p>9.根目录下_config.yml   deploy配置</p>
+<p>deploy:<br>  type: git<br>  repository: <a href="mailto:&#x67;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#109;">&#x67;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#109;</a>:atsap0/atsap0.github.io.git<br>  branch: master</p>
+<p>repo不能写成</p>
+<div class="hljs"><pre><code class="hljs awk">https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/atsap0/</span>atsap0.github.io.git</code></pre></div>
+
+<p>的形式，这是hexo2.x的写法</p>
+<p>10.hexo d</p>
+<p>博客搭建完成</p>
+<p>参考文章：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html</a></p>
+<p>使用github+hexo的方法简单容易上手，也不用花钱，网上有大量的教程，遇到问题比较容易解决,不过也有加载时间长的缺点（现在github.io好像要翻墙才行</p>
+<p>用自己的服务器搭的过程比较麻烦，过程中碰到了一些的坑，本来以为半天就差不多能完成，结果做了整整两天 ，<del>是我不配拥有博客吗</del>，后来用github搭就很快了~</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "dokUvBMzQdl5LhFI4r1sdQzA-gzGzoHsz",
+          app_key: "aUxVI1yQs9z9xoiiy333y1Nv",
+          placeholder: "来说点什么吧！",
+          path: "window.location.pathname",
+          avatar: "retro",
+          meta: "["nick","mail","link"]",
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: "ture",
+          recordIP: "false",
+          serverURLs: "",
+        });
+      });
+    }
+    waitElementVisible('vcomments', loadValine);
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "博客搭建笔记&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+  
+  
+    <script>
+      !function (e, t, a) {
+        function r() {
+          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+          requestAnimationFrame(r)
+        }
+
+        function n() {
+          var t = "function" == typeof e.onclick && e.onclick;
+          e.onclick = function (e) {
+            t && t(), o(e)
+          }
+        }
+
+        function o(e) {
+          var a = t.createElement("div");
+          a.className = "heart", s.push({
+            el: a,
+            x: e.clientX - 5,
+            y: e.clientY - 5,
+            scale: 1,
+            alpha: 1,
+            color: c()
+          }), t.body.appendChild(a)
+        }
+
+        function i(e) {
+          var a = t.createElement("style");
+          a.type = "text/css";
+          try {
+            a.appendChild(t.createTextNode(e))
+          } catch (t) {
+            a.styleSheet.cssText = e
+          }
+          t.getElementsByTagName("head")[0].appendChild(a)
+        }
+
+        function c() {
+          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+        }
+
+        var s = [];
+        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+          setTimeout(e, 1e3 / 60)
+        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
+      }(window, document);
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+</body>
+</html>
